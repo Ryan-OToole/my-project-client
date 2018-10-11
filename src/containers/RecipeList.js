@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Recipe from './Recipe'
-import Filter from './Filter'
+import Recipe from '../components/Recipe'
+import Filter from '../components/Filter'
 
 const RecipeList = (props) => {
 

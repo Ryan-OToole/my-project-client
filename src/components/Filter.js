@@ -14,7 +14,7 @@ class Filter extends Component {
 
   render() {
     return (
-      <div>
+      <div className="search-bar">
         <h3>Filter Recipes By Ingredients Here:</h3>
         <input
           size="50"

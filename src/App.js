@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar'
-import RecipeList from './components/RecipeList'
+import RecipeList from './containers/RecipeList'
 import Filter from './components/Filter'
 import _ from 'lodash';
 
@@ -14,14 +14,14 @@ class App extends Component {
   }
 
   recipeSearch = (searchTerm) => {
-    fetch(`${API}${searchTerm}`)
+    const request = fetch(`${API}${searchTerm}`)
       .then( r=>r.json() )
       .then( json=>
         this.setState({
           recipes: json.results,
           recipesFilter: json.results
         })
-      );
+      ).catch(e=>{alert("Sorry. Something went wrong with the request.")})
   };
 
   filterRecipes = (recipes) => {
