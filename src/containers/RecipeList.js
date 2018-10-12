@@ -9,7 +9,7 @@ const RecipeList = (props) => {
     return <div>Nothing here please provide search term... </div>
   }
 
-  const allRecipes = props.recipes.map(res => <Recipe recipe={res} />)
+  const allRecipes = props.recipes.map(res => <Recipe key={res.title} recipe={res} />)
 
   return (
     <div className="sidebar">

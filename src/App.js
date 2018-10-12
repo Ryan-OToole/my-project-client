@@ -31,7 +31,6 @@ class App extends Component {
   }
 
   handleClick = () => {
-    console.log("inside handleClick")
     Adapter.getFavRecipes()
       .then( json=>
         this.setState({

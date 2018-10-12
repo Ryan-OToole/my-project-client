@@ -5,10 +5,12 @@ import '../style.css'
 const LocalRecipeList = (props) => {
 
   function mapAllLocalRecipes() {
-    if ( props.favRecipeList === [] ) {
-      return <div>Nothing here please provide search term... </div>
+    if (!props.favRecipeList || props.favRecipeList === []) {
+    return <div>Nothing here please add recipe to favorites... </div>
     }
-     return props.favRecipeList.map(res => <LocalRecipe recipe={res} />)
+    else {
+      return props.favRecipeList.map(res => <LocalRecipe key={res.id} recipe={res} />)
+    }
   }
 
     return (

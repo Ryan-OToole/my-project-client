@@ -16,7 +16,7 @@ const Recipe = (props) => {
           <Image className="image" src={(props.recipe.thumbnail !== '') ? props.recipe.thumbnail : require(`../../icon-imgs/icon-${iconNumber}.png`) } />
           <h3>{props.recipe.title}</h3>
           <Card.Description>{handleSlice()}</Card.Description>
-          <button onClick={() =>Adapter.saveFavRecipe(props.recipe)} class='ui button'>Favorite Me</button>
+          <button onClick={() =>Adapter.saveFavRecipe(props.recipe)} className='ui button'>Favorite Me</button>
      </Card>
     );
   }
