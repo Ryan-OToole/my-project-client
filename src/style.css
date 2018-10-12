@@ -21,14 +21,8 @@
 
 .sidebar {
   float:left;
-  width: 30%;
+  width: auto;
   overflow-y: scroll;
   min-height: 1000px;
   max-height: 1200px;
-}
-
-.fav-recipes {
-    float:right;
-    width: 15%;
-    margin-left: 10px;
 }

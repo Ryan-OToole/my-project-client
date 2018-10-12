@@ -1,9 +1,10 @@
-##Getting Started
+## Getting Started
+
+Clone the React frontend, which is in this repo. Before you proceed
  run `bundle install` in the command line.
 
-Fork and clone the React frontend, which is in this repo. Before you proceed, request your own API key from Edamam and adjust the routes accordingly to complete successful queries of the API. Next, run `npm install` in the command line, followed by `npm install --save semantic-ui-react`. Then, run `npm start`. As long as you seeded your database when setting up the backend, you can log in as 'Guest' with the password 'guest'.
-
-
+ run `npm install -g json-server` in the command line to install db.json server
+ run `json-server --watch db.json` in the command line to start.  Make sure it's on localhost:3000
 
 ## Built With
 - JavaScript
