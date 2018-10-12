@@ -6,11 +6,12 @@ Clone the React frontend, which is in this repo. Before you proceed
  run `npm install -g json-server` in the command line to install db.json server
  run `json-server --watch db.json` in the command line to start.  Make sure it's on localhost:3000
 
+ run `npm start` to launch app.  Can use any port except localhost:3000
+
 ## Built With
 - JavaScript
 - React
-- Ruby on Rails
-- PostgreSQL
+- db.json
 - Semantic UI React
 - CSS
 
