@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Card, Image } from 'semantic-ui-react'
 import '../style.css'
-import Adapter from '../Adapter'
 
-const Recipe = (props) => {
+const LocalRecipe = (props) => {
 
   let iconNumber = Math.floor(Math.random()*5+1)
 
@@ -16,9 +15,8 @@ const Recipe = (props) => {
           <Image className="image" src={(props.recipe.thumbnail !== '') ? props.recipe.thumbnail : require(`../../icon-imgs/icon-${iconNumber}.png`) } />
           <h3>{props.recipe.title}</h3>
           <Card.Description>{handleSlice()}</Card.Description>
-          <button onClick={() =>Adapter.saveFavRecipe(props.recipe)} class='ui button'>Favorite Me</button>
      </Card>
     );
   }
 
-export default Recipe;
+export default LocalRecipe;

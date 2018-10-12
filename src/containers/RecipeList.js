@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Recipe from '../components/Recipe'
-import Filter from '../components/Filter'
+import '../style.css'
+
 
 const RecipeList = (props) => {
 
@@ -11,7 +12,7 @@ const RecipeList = (props) => {
   const allRecipes = props.recipes.map(res => <Recipe recipe={res} />)
 
   return (
-    <div>
+    <div className="sidebar">
       <div>{allRecipes}</div>
     </div>
   );

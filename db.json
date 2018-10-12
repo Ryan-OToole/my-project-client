@@ -6,6 +6,20 @@
       "ingredients": "pizza, vegetable oil, cornmeal, water, flour, sausage, provolone cheese, olive oil, tomato, yeast, pepperoni, salt, salt, sugar, basil, oregano",
       "thumbnail": "",
       "id": 1
+    },
+    {
+      "title": "Potato and Cheese Frittata",
+      "href": "http://allrecipes.com/Recipe/Potato-and-Cheese-Frittata/Detail.aspx",
+      "ingredients": "cheddar cheese, eggs, olive oil, onions, potato, salt",
+      "thumbnail": "http://img.recipepuppy.com/2.jpg",
+      "id": 2
+    },
+    {
+      "title": "BBQ Chicken Pizza",
+      "href": "http://www.recipezaar.com/BBQ-Chicken-Pizza-144689",
+      "ingredients": "chicken, brown sugar, cayenne, garlic salt, green pepper, honey, italian cheese blend, salad dressing, margarine, molasses, onions, barbecue sauce, black pepper, prepared pizza crust, provolone cheese, ranch dressing, salt",
+      "thumbnail": "",
+      "id": 3
     }
   ]
 }

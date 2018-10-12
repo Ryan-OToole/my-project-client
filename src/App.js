@@ -3,8 +3,8 @@ import SearchBar from './components/SearchBar'
 import RecipeList from './containers/RecipeList'
 import Filter from './components/Filter'
 import _ from 'lodash';
-
-const API = 'https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?q='
+import Adapter from './Adapter'
+import LocalRecipeList from './containers/LocalRecipeList'
 
 class App extends Component {
 
@@ -14,13 +14,13 @@ class App extends Component {
   }
 
   recipeSearch = (searchTerm) => {
-    const request = fetch(`${API}${searchTerm}`)
-      .then( r=>r.json() )
-      .then( json=>
-        this.setState({
-          recipes: json.results,
-          recipesFilter: json.results
-        })
+
+      Adapter.getRecipesAPI(searchTerm)
+        .then( json=>
+          this.setState({
+            recipes: json.results,
+            recipesFilter: json.results
+          })
       ).catch(e=>{alert("Sorry. Something went wrong with the request.")})
   };
 
@@ -34,6 +34,7 @@ class App extends Component {
       <div className="App">
         <SearchBar onSearchTermChange={recipeSearch} />
         <Filter filterRecipes={this.filterRecipes} recipes={this.state.recipes} recipesFilter={this.state.recipesFilter} />
+        <LocalRecipeList />
         <RecipeList recipes={this.state.recipes} />
       </div>
     );
